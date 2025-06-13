@@ -1,0 +1,31 @@
+#!/bin/bash
+
+sudo pacman -S git sway alacritty firefox thunar blueman rofi-wayland brightnessctl fastfetch autotiling base-devel picom feh --noconfirm
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+rm ~/.bashrc
+rm ~/.bash_profile
+mv ~/linux/bash ~/.bashrc
+mv ~/linux/bash_profile ~/.bash_profile
+source ~/.bashrc
+
+mkdir ~/.config/wallpaper
+mv ~/linux/arch-pacman.png ~/.config/wallpaper/
+
+mkdir ~/.config/alacritty
+mv ~/linux/alacritty ~/.config/alacritty/alacritty.toml
+
+mkdir ~/.config/fastfetch
+mv ~/linux/fastfetch ~/.config/fastfetch/config.jsonc
+
+mkdir ~/.config/sway
+mv ~/linux/sway ~/.config/sway/config
+
+rm ~/.config/rofi/config.rasi
+mv ~/linux/rofi ~/.config/rofi/config.rasi
+
+mv ~/linux/yay ~/.config
+rm ~/linux

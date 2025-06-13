@@ -1,0 +1,24 @@
+{
+  "logo": "gnu",
+  "colors": {
+    "title": "\u001b[1;34m"
+  },
+  "modules": [
+    "separator",
+    "title",
+    "separator",
+    "os",
+    "wm",
+    "packages",
+    "disk",
+    "memory",
+    "swap",
+    "cpu",
+    "gpu",
+    "separator",
+    "localip",
+    "uptime",
+    "battery",
+    "separator"
+  ]
+}
