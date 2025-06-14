@@ -3,7 +3,7 @@
 - How to install:
   
   ```
-  curl -s https://www.github.com/lagantius/linux/install | bash
+  curl -fsSL https://raw.githubusercontent.com/lagantius/linux/main/install | bash
   ```
   
 - Notes:
