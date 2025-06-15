@@ -2,11 +2,18 @@
 
 sudo pacman -S git sway swaybg alacritty firefox thunar blueman rofi-wayland brightnessctl fastfetch autotiling base-devel picom feh go --noconfirm
 
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+a
+cd
+mv yay .yay
+
 git clone https://www.github.com/lagantius/linux
 
-chmod 744 ~/linux/yay-install
-~/linux/yay-install
-mv yay .yay
+#chmod 744 ~/linux/yay-install
+#~/linux/yay-install
+#mv yay .yay
 
 rm ~/.bashrc
 rm ~/.bash_profile
