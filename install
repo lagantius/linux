@@ -4,7 +4,8 @@ sudo pacman -S git sway swaybg alacritty firefox thunar blueman rofi-wayland bri
 
 git clone https://www.github.com/lagantius/linux
 
-~/linux/yay
+chmod 744 ~/linux/yay-install
+~/linux/yay-install
 mv yay .yay
 
 rm ~/.bashrc
