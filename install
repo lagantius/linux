@@ -5,6 +5,7 @@ sudo pacman -S git sway swaybg alacritty firefox thunar blueman rofi-wayland bri
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
+cd
 mv yay .yay
 
 git clone https://www.github.com/lagantius/linux
