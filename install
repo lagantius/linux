@@ -8,6 +8,10 @@ makepkg -si --noconfirm
 cd
 mv yay .yay
 
+flatpak override --user --env=GTK_THEME=Adwaita-dark
+flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt5ct
+flatpak override --user --env=QT_STYLE_OVERRIDE=Adwaita-Dark
+
 git clone https://www.github.com/lagantius/linux
 
 rm ~/.bashrc
