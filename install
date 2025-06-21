@@ -1,16 +1,12 @@
 #!/bin/bash
 
-sudo pacman -S git sway swaybg swaylock vim alacritty flatpak firefox thunar blueman rofi-wayland brightnessctl fastfetch autotiling base-devel picom feh go waybar --noconfirm
+sudo pacman -S git sway swaybg swaylock vim alacritty flatpak firefox yazi blueman rofi-wayland brightnessctl fastfetch autotiling base-devel picom feh go waybar --noconfirm
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd
 mv yay .yay
-
-flatpak override --user --env=GTK_THEME=Adwaita-dark
-flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt5ct
-flatpak override --user --env=QT_STYLE_OVERRIDE=Adwaita-Dark
 
 git clone https://www.github.com/lagantius/linux
 
@@ -34,5 +30,8 @@ mv ~/linux/sway ~/.config/sway/config
 
 mkdir ~/.config/rofi
 mv ~/linux/rofi ~/.config/rofi/config.rasi
+
+mkdir ~/.config/gtk-3.0
+mv ~/linux/gtk ~/.config/gtk-3.0/settings.ini
 
 rm -rf ~/linux
