@@ -71,6 +71,10 @@ mv ~/linux/rofi ~/.config/rofi/config.rasi
 mkdir ~/.config/gtk-3.0
 mv ~/linux/gtk ~/.config/gtk-3.0/settings.ini
 
+flatpak override --user --env=GTK_THEME=Adwaita-dark
+flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt5ct
+flatpak override --user --env=QT_STYLE_OVERRIDE=Adwaita-Dark
+
 if [ "$cpufreq" = "true" ]; then
     chmod 744 ~/linux/cpufreq
     ~/linux/cpufreq
