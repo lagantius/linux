@@ -25,7 +25,7 @@ makepkg -si --noconfirm
 cd
 mv yay .yay
 
-git clone https://www.github.com/lagantius/linux
+git clone https://github.com/lagantius/linux
 
 rm ~/.bashrc
 rm ~/.bash_profile
