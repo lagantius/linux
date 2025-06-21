@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S git sway swaybg swaylock vim alacritty flatpak firefox yazi blueman rofi-wayland brightnessctl fastfetch autotiling base-devel picom feh go waybar --noconfirm
+sudo pacman -S git sway swaybg swaylock swayimg vim alacritty flatpak firefox yazi blueman rofi-wayland brightnessctl fastfetch autotiling base-devel picom feh go grim slurp --noconfirm
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -16,8 +16,11 @@ mv ~/linux/bashrc ~/.bashrc
 mv ~/linux/bash_profile ~/.bash_profile
 source ~/.bashrc
 
-mkdir ~/.config/wallpaper
-mv ~/linux/arch-pacman.png ~/.config/wallpaper/
+mkdir ~/obrázky
+mkdir ~/obrázky/screenshoty
+mkdir ~/obrázky/tapety
+
+mv ~/linux/arch-pacman.png ~/obrázky/tapety
 
 mkdir ~/.config/alacritty
 mv ~/linux/alacritty ~/.config/alacritty/alacritty.toml
