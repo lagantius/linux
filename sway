@@ -29,9 +29,6 @@ exec_always picom -f
 # NetworkManager
 exec --no-startup-id nm-applet
 
-# theme
-exec_always gsettings set $gnome-schema gtk-theme 'AdwaitaDark'
-
 # MouseWindowPlacement
 floating_modifier $mod
 
