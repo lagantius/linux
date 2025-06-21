@@ -1,8 +1,8 @@
 #!/bin/bash
 
 curl -O https://raw.githubusercontent.com/lagantius/linux/main/setup
-chmod +x install
-./install
+chmod +x setup
+./setup
 
 echo "instalace hotová"
-rm install
+rm setup
