@@ -3,5 +3,5 @@
 - How to install:
   
   ```
-  curl -fsSL https://raw.githubusercontent.com/lagantius/linux/main/install | bash
+  bash <(curl -fsSL https://raw.githubusercontent.com/lagantius/linux/main/install)
   ```
