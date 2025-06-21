@@ -1,5 +1,39 @@
 #!/bin/bash
 
+while true; do
+    read -p "Nainstalovat auto-cpufreq? (a/n): " volba
+    case "$volba" in
+        [aA])
+            cpufreq="true"
+            break
+            ;;
+        [nN])
+            cpufreq="false"
+            break
+            ;;
+        *)
+            echo "neplatná volba"
+            ;;
+    esac
+done
+
+while true; do
+    read -p "Nainstalovat flatpaky? (a/n): " volba
+    case "$volba" in
+        [aA])
+            fltpk="true"
+            break
+            ;;
+        [nN])
+            fltpk="false"
+            break
+            ;;
+        *)
+            echo "neplatná volba"
+            ;;
+    esac
+done
+
 sudo pacman -S git sway swaybg swaylock swayimg vim alacritty flatpak firefox yazi blueman rofi-wayland brightnessctl fastfetch autotiling base-devel picom feh go grim slurp --noconfirm
 
 git clone https://aur.archlinux.org/yay.git
@@ -36,5 +70,18 @@ mv ~/linux/rofi ~/.config/rofi/config.rasi
 
 mkdir ~/.config/gtk-3.0
 mv ~/linux/gtk ~/.config/gtk-3.0/settings.ini
+
+if [ "$cpufreq" = "true" ]; then
+    chmod 744 ~/linux/cpufreq
+    ~/linux/cpufreq
+else
+    echo "Přeskakuji instalaci auto-cpufreq"
+fi
+
+if [ "$fltpk" = "true" ]; then
+    flatpak install flathub com.github.PintaProject.Pinta org.gnome.Calculator io.mgba.mGBA net.kuribo64.melonDS org.azahar_emu.Azahar net.lutris.Lutris com.valvesoftware.Steam com.bitwarden.desktop
+else 
+    echo "Přeskakuji instalaci flatpaků"
+fi
 
 rm -rf ~/linux
