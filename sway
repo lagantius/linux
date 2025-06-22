@@ -43,6 +43,11 @@ default_floating_border none
 # lock
 bindsym $mod+l exec swaylock -k --indicator-idle-visible -i ~/obrázky/tapety/$WALLPAPER
 
+# clipboard
+exec_always wl-paste --watch cliphist store &
+bindsym $mod+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
+bindsym $mod+Shift+v exec alacritty -e cliphist wipe
+
 # terminal
 bindsym $mod+Return exec --no-startup-id $TERMINAL
 
