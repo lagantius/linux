@@ -54,6 +54,10 @@ mv ~/linux/rofi ~/.config/rofi/config.rasi
 mkdir ~/.config/gtk-3.0
 mv ~/linux/gtk ~/.config/gtk-3.0/settings.ini
 
+mkdir ~/.config/waybar
+mv ~/linux/waybar ~/.config/waybar/config.jsonc
+mv ~/linux/waybar-style ~/.config/waybar/style.css
+
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.github.calo001.luna com.github.PintaProject.Pinta org.gnome.Calculator io.mgba.mGBA net.kuribo64.melonDS org.azahar_emu.Azahar net.lutris.Lutris com.valvesoftware.Steam com.bitwarden.desktop
 flatpak override --user --env=GTK_THEME=Adwaita-dark
