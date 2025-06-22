@@ -17,7 +17,7 @@ while true; do
     esac
 done
 
-sudo pacman -S git sway swaybg swaylock swayimg waybar noto-fonts noto-fonts-emoji vim alacritty flatpak firefox yazi blueman rofi-wayland brightnessctl fastfetch autotiling base-devel picom feh go grim slurp xorg-xwayland --noconfirm
+sudo pacman -S git sway swaybg swaylock swayimg waybar noto-fonts noto-fonts-emoji vim alacritty cliphist flatpak firefox yazi blueman rofi-wayland brightnessctl fastfetch autotiling base-devel picom feh go grim slurp xorg-xwayland --noconfirm
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
