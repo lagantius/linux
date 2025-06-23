@@ -59,7 +59,7 @@ mv ~/linux/waybar ~/.config/waybar/config.jsonc
 mv ~/linux/waybar-style ~/.config/waybar/style.css
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.github.calo001.luna com.github.PintaProject.Pinta org.gnome.Calculator io.mgba.mGBA net.kuribo64.melonDS org.azahar_emu.Azahar net.lutris.Lutris com.valvesoftware.Steam com.bitwarden.desktop
+flatpak install flathub dev.vencord.Vesktop com.github.calo001.luna com.github.PintaProject.Pinta org.gnome.Calculator io.mgba.mGBA net.kuribo64.melonDS org.azahar_emu.Azahar net.lutris.Lutris com.valvesoftware.Steam com.bitwarden.desktop
 flatpak override --user --env=GTK_THEME=Adwaita-dark
 flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt5ct
 flatpak override --user --env=QT_STYLE_OVERRIDE=Adwaita-Dark
