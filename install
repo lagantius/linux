@@ -4,11 +4,11 @@ while true; do
     read -p "Provést minimální instalaci? (a/n): " volba
     case "$volba" in
         [aA])
-            extra="true"
+            extra="false"
             break
             ;;
         [nN])
-            extra="false"
+            extra="true"
             break
             ;;
         *)
