@@ -34,13 +34,15 @@ while true; do
     esac
 done
 
-sudo pacman -S git sway swaybg swaylock swayimg waybar noto-fonts-emoji vim alacritty cliphist flatpak firefox yazi blueman rofi-wayland brightnessctl lutris steam fastfetch autotiling base-devel picom feh go grim slurp xorg-xwayland --noconfirm
+sudo pacman -S git sway swaybg swaylock swayimg waybar noto-fonts-emoji vim alacritty cliphist flatpak yazi blueman rofi-wayland brightnessctl lutris steam fastfetch autotiling base-devel picom feh go grim slurp xorg-xwayland --noconfirm
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd
 mv yay .yay
+
+yay -S librewolf-bin --noconfirm
 
 git clone https://github.com/lagantius/linux
 
@@ -75,6 +77,8 @@ mkdir ~/.config/waybar
 mv ~/linux/waybar ~/.config/waybar/config.jsonc
 mv ~/linux/waybar-style ~/.config/waybar/style.css
 
+mv ~/linux/user-dirs.dirs ~/.config/user-dirs.dirs
+
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.github.calo001.luna com.github.PintaProject.Pinta org.gnome.Calculator -y
 flatpak override --user --env=GTK_THEME=Adwaita-dark
@@ -82,7 +86,7 @@ flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt5ct
 flatpak override --user --env=QT_STYLE_OVERRIDE=Adwaita-Dark
 
 if [ "$extra" = "true" ]; then
-    sudo pacman -S steam lutris
+    sudo pacman -S steam lutris prismlauncher --noconfirm
     flatpak install flathub dev.vencord.Vesktop io.mgba.mGBA net.kuribo64.melonDS org.azahar_emu.Azahar com.bitwarden.desktop -y
 else
     echo "Pokračuji v mininální instalaci"
