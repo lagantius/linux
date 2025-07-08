@@ -97,4 +97,8 @@ else
     echo "Přeskakuji instalaci auto-cpufreq"
 fi
 
+rm -rf ~/Dokumenty ~/Obrázky ~/Šablony ~/Videa ~/Hudba ~/Plocha ~/Stažené ~/Veřejné
+rm ~/.config/user-dirs.dirs ~/.config/user-dirs.locale
+mv ~/linux/folders ~/.config/user-dirs.dirs
+
 rm -rf ~/linux
