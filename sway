@@ -3,7 +3,7 @@
 # variables
 set $mod Mod4
 set $TERMINAL alacritty
-set $BROWSER firefox
+set $BROWSER librewolf
 set $WALLPAPER arch-pacman.png
 
 # font
