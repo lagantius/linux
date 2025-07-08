@@ -77,8 +77,6 @@ mkdir ~/.config/waybar
 mv ~/linux/waybar ~/.config/waybar/config.jsonc
 mv ~/linux/waybar-style ~/.config/waybar/style.css
 
-mv ~/linux/user-dirs.dirs ~/.config/user-dirs.dirs
-
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.github.calo001.luna com.github.PintaProject.Pinta org.gnome.Calculator -y
 flatpak override --user --env=GTK_THEME=Adwaita-dark
