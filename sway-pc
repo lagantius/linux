@@ -41,7 +41,7 @@ default_floating_border none
 #monitors
 output DP-1 pos 0 0 res 1440x900
 output DP-2 pos 1440 0 res 1280x1024@60Hz
-output HDMI-A-1 pos 2720 0 res 1920x1080
+output HDMI-A-1 pos 1440 1024 res 1920x1080
 
 ################################################################################################################
 
