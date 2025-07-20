@@ -14,7 +14,7 @@ gaps inner 12
 gaps outer 1
 
 # keyboard
-exec_always swaymsg input "*" xkb_layout "cz"
+input * xkb_layout cz
 
 # numlock
 input * xkb_numlock enable
