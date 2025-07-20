@@ -16,17 +16,20 @@ gaps outer 1
 # keyboard
 exec_always --no-startup-id swaymsg input "*" xkb_layout "cz"
 
+# numlock
+input * xkb_numlock enable
+
 # wallpaper
-exec_always --no-startup-id swaybg -i /home/$USER/obrázky/tapety/$WALLPAPER -m fill
+exec_always swaybg -i /home/$USER/obrázky/tapety/$WALLPAPER -m fill
 
 # autotiling
-exec_always --no-startup-id autotiling
+exec_always autotiling
 
 # transparency
 exec_always picom -f
 
 # NetworkManager
-exec --no-startup-id nm-applet
+exec nm-applet
 
 # MouseWindowPlacement
 floating_modifier $mod
@@ -49,23 +52,17 @@ bindsym $mod+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 bindsym $mod+Shift+v exec alacritty -e cliphist wipe
 
 # terminal
-bindsym $mod+Return exec --no-startup-id $TERMINAL
+bindsym $mod+Return exec $TERMINAL
 
 # browser
 bindsym $mod+b exec $BROWSER
-
-# bluetooth
-bindsym $mod+m exec blueman-manager
-
-# timeshift
-bindsym $mod+t exec allacrity -e ~/pokus
 
 # CloseApp
 bindsym $mod+c kill
 
 # app-launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+s exec --no-startup-id rofi -show window
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+s exec rofi -show window
 
 # screenshot
 bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/obrázky/screenshoty/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
@@ -97,10 +94,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # audio
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # SwitchToWorkspace
 bindcode $mod+10 workspace number 1
@@ -125,13 +122,3 @@ bindcode $mod+Shift+16 move container to workspace number 7
 bindcode $mod+Shift+17 move container to workspace number 8
 bindcode $mod+Shift+18 move container to workspace number 9
 bindcode $mod+Shift+19 move container to workspace number 10
-
-# ResizeWindows
-mode "resize" {
-	bindsym Left resize grow width 10 px or 10 ppt
-	bindsym Down resize grow height 10 px or 10 ppt
-	bindsym Up resize shrink height 10 px or 10 ppt
-	bindsym Right resize shrink width 10 px or 10 ppt
-	bindsym $mod+r mode "default"
-}
-bindsym $mod+r mode resize
