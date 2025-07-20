@@ -63,12 +63,6 @@ bindsym $mod+KP_Enter exec --no-startup-id $TERMINAL
 # browser
 bindsym $mod+b exec $BROWSER
 
-# bluetooth
-bindsym $mod+m exec blueman-manager
-
-# timeshift
-bindsym $mod+t exec allacrity -e ~/pokus
-
 # CloseApp
 bindsym $mod+c kill
 
