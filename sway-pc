@@ -57,8 +57,8 @@ bindsym $mod+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 bindsym $mod+Shift+v exec alacritty -e cliphist wipe
 
 # terminal
-bindsym $mod+Return exec --no-startup-id $TERMINAL
-bindsym $mod+KP_Enter exec --no-startup-id $TERMINAL
+bindsym $mod+Return exec $TERMINAL
+bindsym $mod+KP_Enter exec $TERMINAL
 
 # browser
 bindsym $mod+b exec $BROWSER
@@ -67,8 +67,8 @@ bindsym $mod+b exec $BROWSER
 bindsym $mod+c kill
 
 # app-launcher
-bindsym $mod+d exec -show drun
-bindsym $mod+s exec -show window
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+s exec rofi -show window
 
 # screenshot
 bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/obrázky/screenshoty/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
