@@ -41,6 +41,9 @@ exec_always sh -c 'killall waybar; waybar'
 default_border none
 default_floating_border none
 
+#screencast
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 ################################################################################################################
 
 # lock
