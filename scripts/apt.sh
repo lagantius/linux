@@ -3,10 +3,14 @@
 MINIMAL=$1
 
 ########## MINIMAL ##########
-sudo apt install sway swaybg swaylock swayimg waybar noto-fonts noto-fonts-cjk ttf-dejavu noto-fonts-emoji vim alacritty cliphist flatpak yazi rofi-wayland brightnessctl fastfetch autotiling base-devel picom go grim slurp xorg-xwayland flatpak mpv librewolf -y
+sudo apt install sway swaybg swaylock swayimg waybar fonts-noto fonts-noto-cjk fonts-dejavu-core noto-fonts-color-emoji vim alacritty cliphist flatpak rofi-wayland brightnessctl fastfetch autotiling picom grim slurp xwayland mpv extrepo -y
+sudo extrepo enable librewolf
+sudo apt update
+sudo apt install librewolf
 
 ########## EXTRA ##########
 if [ "$MINIMAL" = "true" ]; then
 	echo "Pokračuji v minimální instalaci"
 elif [ "$MINIMAL" = "false" ]; then
-	sudo apt install steam lutris prismlauncher chromium btop -y
+	sudo apt install chromium btop -y
+fi
