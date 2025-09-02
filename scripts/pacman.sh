@@ -17,3 +17,4 @@ if [ "$MINIMAL" = "true" ]; then
 	echo "Pokračuji v minimální instalaci"
 elif [ "$MINIMAL" = "false" ]; then
 	sudo pacman -S steam lutris prismlauncher chromium btop --noconfirm
+fi
