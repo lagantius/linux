@@ -75,7 +75,7 @@ if [ "$PKG" = "pacman" ]; then
 	chmod +x ~/linux/scripts/pacman.sh
 	~/linux/scritps/install-pacman.sh "$MINIMAL"
 elif [ "$PKG" = "zypper" ]; then
-	sudo zypper in git -y
+	sudo zypper -n in git
 	git clone https://github.com/lagantius/linux
 	chmod +x ~/linux/scripts/zypper.sh
 	~/linux/scritps/install-zypper.sh "$MINIMAL"
