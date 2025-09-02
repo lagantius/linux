@@ -1,0 +1,102 @@
+#!/bin/bash
+
+########## PACKAGES ##########
+while true; do
+	echo "Vyber správce balíků:"
+	echo "1 - pacman + yay"
+	echo "2 - zypper"
+	echo "3 - apt"
+	read -p "=====> " VOLBA
+	case "$VOLBA" in
+		1)
+			PKG="pacman"
+			break
+			;;
+		2)
+			PKG="zypper"
+			break
+			;;
+		3)
+			PKG="apt"
+			break
+			;;
+		*)
+			echo "Neplatná volba"
+			;;
+	esac
+done
+
+########## MINIMAL ##########
+while true; do
+	echo "Provést minimální instalaci?"
+	echo "1 - ano"
+	echo "2 - ne"
+	read -p "=====> " VOLBA
+	case "$VOLBA" in
+		1)
+			MINIMAL="true"
+			break
+			;;
+		2)
+			MINIMAL="false"
+			break
+			;;
+		*)
+			echo "Neplatná volba"
+			;;
+	esac
+done
+
+########## AUTO-CPUFREQ ##########
+while true; do
+	echo "Nainstalovat auto-cpufreq?"
+	echo "1 - ano"
+	echo "2 - ne"
+	read -p "=====> " VOLBA
+	case "$VOLBA" in
+		1)
+			CPU="true"
+			break
+			;;
+		2)
+			CPU="false"
+			break
+			;;
+		*)
+			echo "Neplatná volba"
+			;;
+	esac
+done
+
+########### INSTALACE ##########
+if [ "$PKG" = "pacman" ]; then
+	sudo pacman -S git
+	git clone https://github.com/lagantius/linux
+	chmod +x ~/linux/scripts/install-pacman.sh
+	~/linux/scritps/install-pacman.sh "$MINIMAL"
+elif [ "$PKG" = "zypper" ]; then
+	sudo zypper in git
+	git clone https://github.com/lagantius/linux
+	chmod +x ~/linux/scripts/install-zypper.sh
+	~/linux/scritps/install-zypper.sh "$MINIMAL"
+elif [ "$PKG" = "apt" ]; then
+	sudo apt install git
+	git clone https://github.com/lagantius/linux
+	chmod +x ~/linux/scripts/install-apt.sh
+	~/linux/scritps/install-apt.sh "$MINIMAL"
+fi
+
+chmod +x ~/linux/scripts/flatpak.sh
+~/linux/scritps/flatpak.sh "$MINIMAL"
+
+if [ "$CPU" = "true" ]; then
+	chmod +x ~/linux/scripts/cpufreq.sh
+	~/linux/scripts/cpufreq.sh
+elif [ "$CPU" = "false" ]; then
+	echo "Pokračuji bez auto-cpufreq"
+fi
+
+chmod +x ~/linux/scripts/config.sh
+~/linux/scripts/config.sh
+
+rm -rf ~/linux
