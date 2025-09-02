@@ -73,21 +73,21 @@ if [ "$PKG" = "pacman" ]; then
 	sudo pacman -S git --noconfirm
 	git clone https://github.com/lagantius/linux
 	chmod +x ~/linux/scripts/pacman.sh
-	~/linux/scritps/install-pacman.sh "$MINIMAL"
+	~/linux/scripts/pacman.sh "$MINIMAL"
 elif [ "$PKG" = "zypper" ]; then
 	sudo zypper -n in git
 	git clone https://github.com/lagantius/linux
 	chmod +x ~/linux/scripts/zypper.sh
-	~/linux/scritps/install-zypper.sh "$MINIMAL"
+	~/linux/scripts/zypper.sh "$MINIMAL"
 elif [ "$PKG" = "apt" ]; then
 	sudo apt install git -y
 	git clone https://github.com/lagantius/linux
 	chmod +x ~/linux/scripts/apt.sh
-	~/linux/scritps/install-apt.sh "$MINIMAL"
+	~/linux/scripts/apt.sh "$MINIMAL"
 fi
 
 chmod +x ~/linux/scripts/flatpak.sh
-~/linux/scritps/flatpak.sh "$MINIMAL"
+~/linux/scripts/flatpak.sh "$MINIMAL"
 
 if [ "$CPU" = "true" ]; then
 	chmod +x ~/linux/scripts/cpufreq.sh
