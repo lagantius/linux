@@ -72,17 +72,17 @@ done
 if [ "$PKG" = "pacman" ]; then
 	sudo pacman -S git
 	git clone https://github.com/lagantius/linux
-	chmod +x ~/linux/scripts/install-pacman.sh
+	chmod +x ~/linux/scripts/pacman.sh
 	~/linux/scritps/install-pacman.sh "$MINIMAL"
 elif [ "$PKG" = "zypper" ]; then
 	sudo zypper in git
 	git clone https://github.com/lagantius/linux
-	chmod +x ~/linux/scripts/install-zypper.sh
+	chmod +x ~/linux/scripts/zypper.sh
 	~/linux/scritps/install-zypper.sh "$MINIMAL"
 elif [ "$PKG" = "apt" ]; then
 	sudo apt install git
 	git clone https://github.com/lagantius/linux
-	chmod +x ~/linux/scripts/install-apt.sh
+	chmod +x ~/linux/scripts/apt.sh
 	~/linux/scritps/install-apt.sh "$MINIMAL"
 fi
 
