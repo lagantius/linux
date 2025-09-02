@@ -11,3 +11,4 @@ if [ "$MINIMAL" = "true" ]; then
 	echo "Pokračuji v minimální instalaci"
 elif [ "$MINIMAL" = "false" ]; then
 	sudo zypper -n in steam lutris chromium btop
+fi
