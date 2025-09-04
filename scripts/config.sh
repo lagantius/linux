@@ -12,7 +12,6 @@ source ~/.bashrc
 ########## HOME ##########
 mkdir ~/stažené
 mkdir ~/obrázky
-mkdir ~/obrázky/screenshoty
 mkdir ~/obrázky/tapety
 rm -rf ~/Dokumenty ~/Obrázky ~/Šablony ~/Videa ~/Hudba ~/Plocha ~/Stažené ~/Veřejné
 rm ~/.config/user-dirs.dirs ~/.config/user-dirs.locale
