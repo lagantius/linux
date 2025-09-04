@@ -48,7 +48,7 @@
     "network": {
         "format-wifi" : "🛜 {essid}",
         "format-ethernet": "🛜 ethernet",
-        "format-disconnected" : "bez připojení",
+        "format-disconnected" : "🛜 bez připojení",
         "interval": 5,
         "tooltip": false
     },
