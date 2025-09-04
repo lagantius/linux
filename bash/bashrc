@@ -8,7 +8,6 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias sw='swayimg'
-alias cs='rm ~/obrázky/screenshoty/*'
 alias up='~/.config/scripts/update'
 alias fd='sudo mount /dev/sdc1 /mnt/usb1'
 alias fdr='sudo umount /mnt/usb1'
