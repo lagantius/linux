@@ -97,6 +97,6 @@ elif [ "$CPU" = "false" ]; then
 fi
 
 chmod +x ~/linux/scripts/config.sh
-~/linux/scripts/config.sh
+~/linux/scripts/config.sh "$PKG"
 
 rm -rf ~/linux
