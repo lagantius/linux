@@ -1,5 +1,7 @@
 #!/bin/bash
 
+PKG=$1
+
 ########## BASH ##########
 rm ~/.bashrc
 rm ~/.bash_profile
