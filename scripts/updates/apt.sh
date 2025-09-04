@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo ""
-sudo echo "==========> AKTUALIZACE SYSTÉMU <=========="
+sudo echo ""
+echo "==========> AKTUALIZACE SYSTÉMU <=========="
 sudo apt update -y
 sudo apt full-upgrade -y
 echo ""
