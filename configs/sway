@@ -70,7 +70,7 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+s exec rofi -show window
 
 # screenshot
-bindsym $mod+Shift+s exec grim -g "$(slurp)" ~/obrázky/screenshoty/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
 
 # fullscreen
 bindsym $mod+f fullscreen toggle
