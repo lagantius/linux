@@ -10,34 +10,23 @@ mv ~/linux/bash/bash_profile ~/.bash_profile
 source ~/.bashrc
 
 ########## HOME ##########
+sudo mkdir /mnt/usb1
 mkdir ~/stažené
 mkdir ~/obrázky
 mkdir ~/obrázky/tapety
+mkdir ~/.config/scripts
 rm -rf ~/Dokumenty ~/Obrázky ~/Šablony ~/Videa ~/Hudba ~/Plocha ~/Stažené ~/Veřejné
 rm ~/.config/user-dirs.dirs ~/.config/user-dirs.locale
-mv ~/linux/configs/folders ~/.config/user-dirs.dirs
-sudo mkdir /mnt/usb1
-mkdir ~/.config/scripts
 
 ########## CONFIG ##########
-mkdir ~/.config/alacritty
-mv ~/linux/configs/alacritty ~/.config/alacritty/alacritty.toml
-
-mkdir ~/.config/fastfetch
-mv ~/linux/configs/fastfetch ~/.config/fastfetch/config.jsonc
-
-mkdir ~/.config/sway
-mv ~/linux/configs/sway ~/.config/sway/config
-
-mkdir ~/.config/rofi
+mv ~/linux/configs/alacritty ~/.config/alacritty
+mv ~/linux/configs/fastfetch ~/.config/fastfetch
+mv ~/linux/configs/sway ~/.config/sway
 mv ~/linux/configs/rofi ~/.config/rofi/config.rasi
-
-mkdir ~/.config/gtk-3.0
-mv ~/linux/configs/gtk ~/.config/gtk-3.0/settings.ini
-
-mkdir ~/.config/waybar
-mv ~/linux/configs/waybar ~/.config/waybar/config.jsonc
-mv ~/linux/configs/waybar-style ~/.config/waybar/style.css
+mv ~/linux/configs/gtk ~/.config/gtk-3.0
+mv ~/linux/configs/waybar ~/.config/waybar
+mv ~/linux/configs/mc ~/.config/mc
+mv ~/linux/configs/folders ~/.config/user-dirs.dirs
 
 ########## WALLPAPER ##########
 if [ "$PKG" = "pacman" ]; then
