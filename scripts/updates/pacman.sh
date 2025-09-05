@@ -1,22 +1,24 @@
 #!/bin/bash
 
-sudo echo ""
+sudo -v
+echo ""
 echo "==========> AKTUALIZACE SYSTÉMU <=========="
 yay -Syu --noconfirm
-echo ""
 
 echo ""
 echo "==========> AKTUALIZACE FLATPAKŮ <=========="
 flatpak update -y
-echo ""
 
 echo ""
 echo "==========> ODSTRAŇOVÁNÍ BALÍKŮ <=========="
-flatpak remove --unused
-yay -Rns $(pacman -Qdtq)
-yay -Scc --noconfirm
-echo ""
+flatpak remove --unused -y
+
+orphans=$(yay -Qdtq || true)
+if [[ -n "$orphans" ]]; then
+	yay -Rns --noconfirm $orphans
+fi
+
+yay -Sc --noconfirm
 
 echo ""
 echo "==========> AKTUALIZACE HOTOVY <=========="
-echo ""
