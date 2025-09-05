@@ -1,23 +1,20 @@
 #!/bin/bash
 
-sudo echo ""
+sudo -v
+echo ""
 echo "==========> AKTUALIZACE SYSTÉMU <=========="
 sudo apt update -y
 sudo apt full-upgrade -y
-echo ""
 
 echo ""
 echo "==========> AKTUALIZACE FLATPAKŮ <=========="
 flatpak update -y
-echo""
 
 echo ""
 echo "==========> ODSTRAŇOVÁNÍ BALÍKŮ <=========="
 flatpak remove --unused
 sudo apt autoremove -y
-sudo apt clean -y
-echo ""
+sudo apt autoclean -y
 
 echo ""
 echo "==========> AKTUALIZACE HOTOVY <=========="
-echo ""
