@@ -19,14 +19,14 @@ rm -rf ~/Dokumenty ~/Obrázky ~/Šablony ~/Videa ~/Hudba ~/Plocha ~/Stažené ~/
 rm ~/.config/user-dirs.dirs ~/.config/user-dirs.locale
 
 ########## CONFIG ##########
-mv ~/linux/configs/alacritty ~/.config/alacritty
-mv ~/linux/configs/fastfetch ~/.config/fastfetch
-mv ~/linux/configs/sway ~/.config/sway
-mv ~/linux/configs/rofi ~/.config/rofi/config.rasi
-mv ~/linux/configs/gtk ~/.config/gtk-3.0
-mv ~/linux/configs/waybar ~/.config/waybar
-mv ~/linux/configs/mc ~/.config/mc
-mv ~/linux/configs/folders ~/.config/user-dirs.dirs
+mv ~/linux/configs/alacritty ~/.config
+mv ~/linux/configs/fastfetch ~/.config
+mv ~/linux/configs/sway ~/.config
+mv ~/linux/configs/rofi ~/.config
+mv ~/linux/configs/gtk ~/.config
+mv ~/linux/configs/waybar ~/.config
+mv ~/linux/configs/mc ~/.config
+mv ~/linux/configs/user-dirs.dirs ~/.config
 
 ########## WALLPAPER ##########
 if [ "$PKG" = "pacman" ]; then
