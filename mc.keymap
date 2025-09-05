@@ -1,0 +1,8 @@
+[filemanager]
+Copy = ctrl-c
+Delete = ctrl-d
+View = ctrl-a
+Edit = ctrl-e
+Move = ctrl-r
+MakeDir = ctrl-w
+Quit = ctrl-x
