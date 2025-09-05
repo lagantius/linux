@@ -1,7 +1,6 @@
 #!/bin/bash
 
 MINIMAL=$1
-sudo -v
 
 ########## MINIMAL ##########
 sudo pacman -S sway swaybg swaylock swayimg waybar noto-fonts noto-fonts-cjk ttf-dejavu noto-fonts-emoji vim alacritty cliphist flatpak yazi rofi-wayland brightnessctl fastfetch autotiling base-devel picom go grim slurp xorg-xwayland nmtui mpv --noconfirm
