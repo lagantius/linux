@@ -5,6 +5,20 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-    exec dbus-run-session sway
+    if [ -f /etc/os-release ]; then
+        . /etc/os-release
+        case "$ID" in
+            arch)
+                exec dbus-run-session sway
+                ;;
+            debian|opensuse*|tumbleweed|leap)
+                exec sway
+                ;;
+            *)
+                exec sway  # fallback
+                ;;
+        esac
+    else
+        exec sway  # fallback if /etc/os-release is missing
+    fi
 fi
-
