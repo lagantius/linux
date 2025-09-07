@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PKG=$1
+sudo -v
 
 ########## BASH ##########
 rm ~/.bashrc
@@ -37,6 +38,9 @@ elif [ "$PKG" = "zypper" ]; then
 	mv ~/linux/wallpapers/opensuse.png ~/obrázky/tapety/default.png
 	mv ~/linux/scripts/updates/zypper.sh ~/.config/scripts/update
 	chmod +x ~/.config/scripts/update
+
+ 	sudo mv /usr/sbin/reboot /usr/bin/reboot
+	sudo mv /usr/sbin/shutdown /usr/bin/shutdown
 elif [ "$PKG" = "apt" ]; then
 	mv ~/linux/wallpapers/debian.png ~/obrázky/tapety/default.png
 	mv ~/linux/scripts/updates/apt.sh ~/.config/scripts/update
