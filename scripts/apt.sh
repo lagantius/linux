@@ -3,7 +3,7 @@
 MINIMAL=$1
 
 ########## MINIMAL ##########
-sudo apt install sway swaybg swaylock swayimg waybar fonts-noto fonts-noto-cjk fonts-dejavu-core fonts-noto-color-emoji vim alacritty cliphist flatpak mc rofi brightnessctl fastfetch autotiling picom grim slurp xwayland mpv extrepo pipewire network-manager -y
+sudo apt install sway swaybg swaylock swayimg waybar fonts-noto fonts-noto-cjk fonts-dejavu-core fonts-noto-color-emoji vim alacritty cliphist flatpak mc rofi brightnessctl fastfetch autotiling picom grim slurp xwayland mpv extrepo pipewire pulseaudio-utils network-manager -y
 sudo extrepo enable librewolf
 sudo apt update
 sudo apt install librewolf
