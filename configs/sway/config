@@ -36,7 +36,7 @@ exec nm-applet
 floating_modifier $mod
 
 # taskbar
-exec_always sh -c 'killall waybar; waybar'
+exec_always sh -c 'pkill waybar; waybar'
 
 # borders
 default_border none
