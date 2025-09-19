@@ -14,7 +14,7 @@ sudo flatpak install flathub com.github.calo001.luna com.infinipaint.infinipaint
 if [ "$MINIMAL" = "true" ]; then
 	echo "Pokračuji v minimální instalaci"
 elif [ "$MINIMAL" = "false" ]; then
-	#sudo flatpak install flathub dev.vencord.Vesktop io.mgba.mGBA net.kuribo64.melonDS org.azahar_emu.Azahar com.bitwarden.desktop com.obsproject.Studio org.gimp.GIMP -y
-	#flatpak override --user --filesystem=~/obrázky dev.vencord.Vesktop
+	sudo flatpak install flathub dev.vencord.Vesktop io.mgba.mGBA net.kuribo64.melonDS org.azahar_emu.Azahar com.bitwarden.desktop com.obsproject.Studio org.gimp.GIMP -y
+	flatpak override --user --filesystem=~/obrázky dev.vencord.Vesktop
 	echo temp
 fi
