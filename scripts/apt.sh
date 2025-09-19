@@ -8,6 +8,8 @@ sudo extrepo enable librewolf
 sudo apt update
 sudo apt install librewolf
 
+mkdir ~/.config
+
 ########## EXTRA ##########
 if [ "$MINIMAL" = "true" ]; then
 	echo "Pokračuji v minimální instalaci"
