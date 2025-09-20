@@ -15,5 +15,5 @@ mkdir ~/.config
 if [ "$MINIMAL" = "true" ]; then
 	echo "Pokračuji v minimální instalaci"
 elif [ "$MINIMAL" = "false" ]; then
-	sudo apt install chromium btop steam-installer -y
+	sudo apt install chromium btop -y
 fi
