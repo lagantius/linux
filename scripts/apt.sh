@@ -5,7 +5,6 @@ MINIMAL=$1
 ########## MINIMAL ##########
 sudo apt install sway swaybg swaylock swayimg waybar fonts-noto fonts-noto-cjk fonts-dejavu-core fonts-noto-color-emoji vim alacritty cliphist flatpak mc rofi brightnessctl fastfetch autotiling picom grim slurp xwayland mpv extrepo pipewire pulseaudio-utils network-manager -y
 sudo extrepo enable librewolf
-sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install librewolf
 
@@ -16,4 +15,5 @@ if [ "$MINIMAL" = "true" ]; then
 	echo "Pokračuji v minimální instalaci"
 elif [ "$MINIMAL" = "false" ]; then
 	sudo apt install chromium btop -y
+	flatpak install flathub com.valvesoftware.Steam
 fi
