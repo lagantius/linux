@@ -8,7 +8,7 @@ flatpak override --user --env=GTK_THEME=Adwaita-dark
 flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt5ct
 flatpak override --user --env=QT_STYLE_OVERRIDE=Adwaita-Dark
 
-sudo flatpak install flathub com.github.calo001.luna com.infinipaint.infinipaint org.gnome.Calculator -y
+sudo flatpak install flathub com.github.calo001.luna com.infinipaint.infinipaint dev.edfloreshz.Calculator -y
 
 ########## EXTRA ##########
 if [ "$MINIMAL" = "true" ]; then
