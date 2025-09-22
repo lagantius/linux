@@ -45,4 +45,7 @@ elif [ "$PKG" = "apt" ]; then
 	mv ~/linux/wallpapers/debian.png ~/obrázky/tapety/default.png
 	mv ~/linux/scripts/updates/apt.sh ~/.config/scripts/update
 	chmod +x ~/.config/scripts/update
+
+	sudo mv /usr/sbin/reboot /usr/bin/reboot
+	sudo mv /usr/sbin/shutdown /usr/bin/shutdown
 fi
