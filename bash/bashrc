@@ -19,7 +19,6 @@ alias slp='systemctl suspend && swaylock -k --indicator-idle-visible -i ~/obráz
 
 # user aliases
 alias sw='swayimg'
-alias fa='fastfetch'
 alias tmst='sudo -E timeshift-gtk'
 alias smc='sudo MC_PROFILE_ROOT="$HOME" mc'
 alias gpgkill='gpgconf --kill gpg-agent'
