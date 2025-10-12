@@ -3,13 +3,13 @@
 MINIMAL=$1
 
 ########## MINIMAL ##########
-sudo pacman -S sway swaybg swaylock swayimg waybar noto-fonts noto-fonts-cjk ttf-dejavu noto-fonts-emoji vim alacritty cliphist flatpak mc rofi-wayland brightnessctl fastfetch autotiling base-devel picom go grim slurp xorg-xwayland mpv --noconfirm
+sudo pacman -S sway swaybg swaylock swayimg waybar noto-fonts noto-fonts-cjk ttf-dejavu noto-fonts-emoji vim alacritty cliphist flatpak mc rofi-wayland brightnessctl fastfetch autotiling base-devel picom go grim slurp xorg-xwayland mpv qt5ct nwg-look --noconfirm
 
-git clone https://aur.archlinux.org/yay.git
-cd yay
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
 makepkg -si --noconfirm
 cd
-mv yay .yay
+mv yay-bin .yay-bin
 yay -S librewolf-bin --noconfirm
 
 ########## EXTRA ##########
