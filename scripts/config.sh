@@ -24,7 +24,6 @@ mv ~/linux/configs/alacritty ~/.config
 mv ~/linux/configs/fastfetch ~/.config
 mv ~/linux/configs/sway ~/.config
 mv ~/linux/configs/rofi ~/.config
-mv ~/linux/configs/gtk ~/.config/gtk-3.0
 mv ~/linux/configs/waybar ~/.config
 mv ~/linux/configs/mc ~/.config
 mv ~/linux/configs/user-dirs.dirs ~/.config
