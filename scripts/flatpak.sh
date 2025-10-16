@@ -4,6 +4,7 @@ MINIMAL="$1"
 sudo -v
 ########## MINIMAL ##########
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install org.gtk.Gtk3theme.Adwaita-dark -y
 flatpak override --user --env=GTK_THEME=Adwaita-dark
 flatpak override --user --env=QT_QPA_PLATFORMTHEME=qt5ct
 flatpak override --user --env=QT_STYLE_OVERRIDE=Adwaita-Dark
