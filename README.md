@@ -1,7 +1,7 @@
 # Personal Sway configuration avaible for:
 - pacman
 - zypper
-- apt (debian 13.0)
+- apt (debian 13.1)
 
 ## How to install:
   
