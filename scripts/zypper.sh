@@ -3,7 +3,7 @@
 MINIMAL=$1
 
 ########## MINIMAL ##########
-sudo zypper -n in sway swaybg swaylock swayimg waybar google-noto-fonts google-noto-sans-cjk-fonts dejavu-fonts google-noto-coloremoji-fonts vim alacritty cliphist flatpak mc rofi-wayland brightnessctl fastfetch autotiling-rs picom grim slurp xwayland mpv opi
+sudo zypper -n in sway swaybg swaylock swayimg waybar google-noto-fonts google-noto-sans-cjk-fonts dejavu-fonts google-noto-coloremoji-fonts vim alacritty cliphist flatpak mc rofi-wayland brightnessctl fastfetch autotiling-rs picom grim slurp xwayland mpv opi qt5ct qt6ct nwg-look -n
 sudo opi librewolf -n
 
 ########## EXTRA ##########
