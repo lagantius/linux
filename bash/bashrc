@@ -10,7 +10,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='\[\033[1;32m\][\u@\h \w] > \[\033[0m\]'
 export QT_QPA_PLATFORMTHEME=qt5ct
-export FCEDIT=vim
+export FCEDIT=micro
 
 # system aliases
 alias up='~/.config/scripts/update'
@@ -23,3 +23,4 @@ alias sw='swayimg'
 alias tmst='sudo -E timeshift-gtk'
 alias smc='sudo MC_PROFILE_ROOT="$HOME" mc'
 alias gpgkill='gpgconf --kill gpg-agent'
+alias mi='micro'
