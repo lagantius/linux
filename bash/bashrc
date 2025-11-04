@@ -11,6 +11,7 @@ alias grep='grep --color=auto'
 PS1='\[\033[1;32m\][\u@\h \w] > \[\033[0m\]'
 export QT_QPA_PLATFORMTHEME=qt5ct
 export FCEDIT=micro
+export FILE_MANAGER=pcmanfm
 
 # system aliases
 alias up='~/.config/scripts/update'
