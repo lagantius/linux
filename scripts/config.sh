@@ -26,6 +26,7 @@ mv ~/linux/configs/sway ~/.config
 mv ~/linux/configs/rofi ~/.config
 mv ~/linux/configs/waybar ~/.config
 mv ~/linux/configs/mc ~/.config
+mv ~/linux/configs/micro ~/.config
 mv ~/linux/configs/user-dirs.dirs ~/.config
 
 ########## WALLPAPER ##########
