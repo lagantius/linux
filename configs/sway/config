@@ -8,7 +8,7 @@ set $BROWSER2 chromium
 set $WALLPAPER ~/obrázky/tapety/default.png
 
 # font
-font pango:monospace 8
+font monospace 11
 
 # gaps
 gaps inner 12
@@ -42,8 +42,8 @@ exec_always sh -c 'pkill waybar; waybar'
 default_border none
 default_floating_border none
 
-#screencast
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+# extra things that make it work
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
 
 ################################################################################################################
 
