@@ -35,7 +35,7 @@ if [ "$PKG" = "pacman" ]; then
 	mv ~/linux/scripts/updates/pacman.sh ~/.config/scripts/update
 	chmod +x ~/.config/scripts/update
 elif [ "$PKG" = "zypper" ]; then
-	mv ~/linux/wallpapers/opensuse.png ~/obrázky/tapety/default.png
+	mv ~/linux/wallpapers/tumbleweed.png ~/obrázky/tapety/default.png
 	mv ~/linux/scripts/updates/zypper.sh ~/.config/scripts/update
 	chmod +x ~/.config/scripts/update
 
