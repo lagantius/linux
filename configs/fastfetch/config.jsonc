@@ -18,6 +18,13 @@
     "gpu",
     "separator",
     "localip",
+    {
+    	"key": "Age",
+    	"type": "disk",
+    	"keyColor": "97",
+    	"folders": "/",
+    	"format": "{days} days ({create-time:10})"
+    },
     "uptime",
     "battery",
     "separator"
