@@ -80,7 +80,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # RestartI3
 bindsym $mod+Shift+r reload
